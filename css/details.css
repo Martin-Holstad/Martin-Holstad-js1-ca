@@ -1,0 +1,35 @@
+h1 {
+  margin-bottom: 30px;
+  margin-top: 0px;
+}
+
+.image {
+  width: 500px;
+  height: 500px;
+  margin-left: 20px;
+}
+
+.details-container {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-top: 100px;
+}
+
+p {
+  width: 500px;
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.details-text {
+  margin-top: 0px;
+}
+
+html,
+body,
+main {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
