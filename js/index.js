@@ -16,7 +16,7 @@ async function finalSpace() {
   console.log(characterInfo);
 
   characterInfo.forEach(function (characters) {
-    infoContainer.innerHTML += `<a href="../details.html?id=${characters.id}" 
+    infoContainer.innerHTML += `<a class="anchor" href="../details.html?id=${characters.id}" 
                                 <div  class="info" > 
                                 <p class="name"> ${characters.name}</p>
                                 <img class="image" src="${characters.img_url}" alt="${characters.name}">
