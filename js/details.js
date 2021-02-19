@@ -1,7 +1,5 @@
 const detailContainer = document.querySelector(".details-container");
 
-const errorContainer = document.querySelector(".error");
-
 const loader = document.querySelector(".loader");
 
 const idString = document.location.search;
@@ -26,8 +24,8 @@ async function characterDetails() {
 
     newHtml(details);
   } catch (error) {
-    console.log(error);
-    errorContainer.innerHTML = message("An error occured", error);
+    console.log("An error occured");
+    detailContainer.innerHTML = "An error occured";
   }
 }
 
