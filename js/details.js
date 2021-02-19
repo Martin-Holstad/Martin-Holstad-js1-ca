@@ -1,12 +1,14 @@
 const detailContainer = document.querySelector(".details-container");
 
+const errorContainer = document.querySelector(".error");
+
 const loader = document.querySelector(".loader");
 
 const idString = document.location.search;
 
 const newUrl = new URLSearchParams(idString);
 
-const id = newUrl.get("id");
+const id = newUrl.get("id", "name");
 
 console.log(id);
 
@@ -15,13 +17,18 @@ const url = "https://finalspaceapi.com/api/v0/character/" + id;
 console.log(url);
 
 async function characterDetails() {
-  const response = await fetch(url);
+  try {
+    const response = await fetch(url);
 
-  const details = await response.json();
+    const details = await response.json();
 
-  loader.innerHTML = "";
+    loader.innerHTML = "";
 
-  newHtml(details);
+    newHtml(details);
+  } catch (error) {
+    console.log(error);
+    errorContainer.innerHTML = message("An error occured", error);
+  }
 }
 
 characterDetails();
